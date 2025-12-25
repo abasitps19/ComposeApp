@@ -14,7 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.iot.composeapp.presentation.compose.components.ScanfActivity
-import com.iot.composeapp.presentation.lists.components.CustomLazyColumn
+import com.iot.composeapp.presentation.lists.components.MyList
 import com.iot.composeapp.ui.theme.ComposeAppTheme
 
 

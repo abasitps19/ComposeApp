@@ -20,8 +20,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import com.iot.composeapp.R
-import com.iot.composeapp.presentation.lists.components.CustomLazyColumn
+import com.iot.composeapp.presentation.lists.components.MyList
 import com.iot.composeapp.presentation.lists.components.CustomLazyRows
+import com.iot.composeapp.presentation.lists.components.MyList
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -117,7 +118,7 @@ fun CustomFAB(context: Context){
             Toast.makeText(
                 context,
                 "Clicked on 3rd ICON",
-                Toast.LENGTH_LONG
+                Toast.LENGTH_SHORT
             ).show()
         }) {
             Icon(painter = painterResource(R.drawable.baseline_add_24),
@@ -142,7 +143,7 @@ fun ScanfActivity(context: Context ){
         }
 
     ) {
-        CustomLazyColumn()
+        MyList(context)
         //CustomLazyRows()
     }
 }
