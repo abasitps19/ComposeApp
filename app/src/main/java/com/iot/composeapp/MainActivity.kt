@@ -40,6 +40,7 @@ class MainActivity : ComponentActivity() {
                     //ProgressIndicatiorActivity()
                     //LinearProgressActivity()
                     //ColumnActivity()
+
                     ScanfActivity(this)
 
 

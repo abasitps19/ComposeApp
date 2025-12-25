@@ -21,6 +21,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import com.iot.composeapp.R
 import com.iot.composeapp.presentation.lists.components.CustomLazyColumn
+import com.iot.composeapp.presentation.lists.components.CustomLazyRows
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -142,5 +143,6 @@ fun ScanfActivity(context: Context ){
 
     ) {
         CustomLazyColumn()
+        //CustomLazyRows()
     }
 }
