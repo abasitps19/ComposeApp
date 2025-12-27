@@ -22,6 +22,7 @@ import androidx.compose.ui.res.painterResource
 import com.iot.composeapp.R
 import com.iot.composeapp.presentation.lists.components.MyList
 import com.iot.composeapp.presentation.lists.components.CustomLazyRows
+import com.iot.composeapp.presentation.lists.components.MyCard
 import com.iot.composeapp.presentation.lists.components.MyList
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -143,7 +144,8 @@ fun ScanfActivity(context: Context ){
         }
 
     ) {
-        MyList(context)
+        MyCard()
+        //MyList(context)
         //CustomLazyRows()
     }
 }

@@ -9,26 +9,27 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-
+import androidx.compose.ui.unit.sp
 
 @Composable
 fun MyCard() {
-
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .background(Color.Blue)
-            .padding(16.dp),
+            .background(Color.Gray)
+            .padding(vertical = 150.dp, horizontal = 20.dp),
 
-        colors = CardDefaults.cardColors(Color.Yellow),
-        elevation = CardDefaults.cardElevation(8.dp)
+        colors = CardDefaults.cardColors(Color.Gray),
+        elevation = CardDefaults.cardElevation(10.dp)
 
     ) {
         Text(
             text = "This is a simple card",
+            fontWeight = FontWeight.Bold,
+            fontSize = 24.sp,
             modifier = Modifier.padding(16.dp)
         )
-
     }
 }

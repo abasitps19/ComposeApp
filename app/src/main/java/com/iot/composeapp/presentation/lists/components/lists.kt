@@ -138,14 +138,11 @@ fun MyList(context: Context){
 
                     )
             }
-
-
             items(itemsList) { item -> CustomItem(context,item)
                 /*Text(text = item,
                     fontSize = 20.sp,
                     fontWeight = FontWeight.Bold)
                     */
-
             }
         }
     }
@@ -177,32 +174,23 @@ fun CustomItem(context: Context, itemTitle: String){
             Text("view")
         }
     }
-
 }
+
+
 @Composable
 //implemented long press, short press etc
 fun CustomItem2(context: Context, title: String){
     Row(
         modifier = Modifier
             .padding(8.dp)
-            .fillMaxWidth()
-           ,
+            .fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Text(text=title,
             fontSize = 30.sp,
             modifier = Modifier.background(Color.Gray)
-                /*.pointerInput(Unit){
-                    detectTapGestures {
-                        onDoubleTap= {
-
-                        }
-                    }
-
-                }*/
         )
     }
-
 }
 @Composable
 fun CustomLazyRows(){
