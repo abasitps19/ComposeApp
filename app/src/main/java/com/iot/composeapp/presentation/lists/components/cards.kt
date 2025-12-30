@@ -16,6 +16,7 @@ import androidx.compose.ui.unit.sp
 @Composable
 fun MyCard() {
     Card(
+
         modifier = Modifier
             .fillMaxWidth()
             .background(Color.Gray)
@@ -23,7 +24,6 @@ fun MyCard() {
 
         colors = CardDefaults.cardColors(Color.Gray),
         elevation = CardDefaults.cardElevation(10.dp)
-
     ) {
         Text(
             text = "This is a simple card",

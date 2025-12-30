@@ -18,6 +18,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.iot.composeapp.R
@@ -35,13 +36,13 @@ fun MyCustomItem(item: Item){
 
     ) {
 
-        Column(modifier = Modifier.padding(16.dp)) {
+        Column(modifier = Modifier.padding(10.dp)) {
 
             Image(painter = painterResource(id = item.image),
                 contentDescription = "Item Image",
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(180.dp),
+                    .height(160.dp),
                 contentScale = ContentScale.Crop
             )
 
@@ -106,7 +107,6 @@ fun LazyColumnWithStickyHeader(){
     LazyColumn {
         groupedItems.forEach{
                 (header, items) ->
-
             stickyHeader {
                 MyCustomHeader(title = header)
             }
@@ -116,8 +116,10 @@ fun LazyColumnWithStickyHeader(){
 
         }
     }
-
-
-
 }
 
+@Preview
+@Composable
+fun CardPreview(){
+    LazyColumnWithStickyHeader()
+}
