@@ -5,23 +5,20 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.iot.composeapp.presentation.compose.components.ScanfActivity
+import androidx.navigation.navArgs
+import androidx.navigation.navArgument
 import com.iot.composeapp.presentation.grocery.LazyColumnWithStickyHeader
-import com.iot.composeapp.presentation.lists.components.MyCard
-import com.iot.composeapp.presentation.lists.components.MyList
-import com.iot.composeapp.presentation.navgations.Screen1
-import com.iot.composeapp.presentation.navgations.Screen2
+import com.iot.composeapp.presentation.navgations.Screen1Argu
+import com.iot.composeapp.presentation.navgations.Screen1Simple
+import com.iot.composeapp.presentation.navgations.Screen2Argu
+import com.iot.composeapp.presentation.navgations.Screen2Simple
 import com.iot.composeapp.ui.theme.ComposeAppTheme
 
 
@@ -49,8 +46,22 @@ class MainActivity : ComponentActivity() {
                 NavHost(navController = navController,
                     startDestination = "first") {
                     //define first composable screen
-                    composable("first"){ Screen1(navController) }
-                    composable("second"){ Screen2(navController) }
+                    composable("first"){ Screen1Argu(navController) }
+                    composable(
+                        route = "second/{userName}/{Age}",
+                        arguments = listOf(
+                            //passing a list of named nav args
+                            navArgument(name = "userName"){ type = NavType.StringType},
+                            navArgument(name="Age"){ type = NavType.StringType}
+
+                        )
+                    ){
+                        backStackEntry ->
+                        Screen2Argu(
+                            navController,
+                            backStackEntry.arguments?.getString("userName").toString(),
+                            backStackEntry.arguments?.getString("Age").toString()
+                        ) }
                 }
             }
         }
