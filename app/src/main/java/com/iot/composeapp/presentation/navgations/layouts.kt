@@ -124,7 +124,7 @@ fun Screen1Argu(navController: NavController){
 
             Button({
                 //passing as argument the text entered into Text Field Name
-                navController.navigate("Second/$enteredName/$enteredAge")
+                navController.navigate("Second/$enteredName?age=$enteredAge")
             }){
                 Text("Click to 2nd Screen", fontSize = 20.sp)
             }

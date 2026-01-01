@@ -48,11 +48,15 @@ class MainActivity : ComponentActivity() {
                     //define first composable screen
                     composable("first"){ Screen1Argu(navController) }
                     composable(
-                        route = "second/{userName}/{Age}",
+                        route = "second/{userName}?age={Age}",
                         arguments = listOf(
                             //passing a list of named nav args
-                            navArgument(name = "userName"){ type = NavType.StringType},
-                            navArgument(name="Age"){ type = NavType.StringType}
+                            navArgument(name = "userName")
+                            { type = NavType.StringType},
+                            navArgument(name="Age")
+                            { type = NavType.StringType
+                            defaultValue = "30"
+                            nullable = true}
 
                         )
                     ){
