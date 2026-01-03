@@ -12,27 +12,28 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun ProfileScreen(){
+fun SettingScreen(){
+
     Box(
         modifier = Modifier
             .fillMaxSize()
             .padding(horizontal = 10.dp),
         contentAlignment = Alignment.Center
-    ) {
-        Column(modifier = Modifier.fillMaxWidth(),
-            horizontalAlignment = Alignment.CenterHorizontally) {
-           // Text(text = "Login", fontSize = 24.sp, fontWeight = FontWeight.Bold)
-
-           Text("Profile ID: ", fontSize = 30.sp)
-            Spacer(modifier = Modifier.height(12.dp))
-            Button(onClick = {/*TODO*/ }) {
-                Text("Go to Settings")
+    ){
+        Column(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Text(text="Settings", fontSize = 40.sp)
+            Spacer(modifier= Modifier.height(10.dp))
+            Button(onClick = {}) {
+                Text(text="Navigate to Home")
             }
         }
+
     }
 }
