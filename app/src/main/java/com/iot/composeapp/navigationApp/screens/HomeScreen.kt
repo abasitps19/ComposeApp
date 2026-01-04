@@ -33,7 +33,7 @@ fun HomeScreen(
             }
             Spacer(modifier = Modifier.height(12.dp))
 
-            Button(onClick = {navigateToSettings }) {
+            Button(onClick = {navigateToSettings() }) {
                 Text("Settings")
             }
         }

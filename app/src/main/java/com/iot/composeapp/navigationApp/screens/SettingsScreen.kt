@@ -32,7 +32,7 @@ fun SettingScreen(
         ) {
             Text(text="Settings", fontSize = 40.sp)
             Spacer(modifier= Modifier.height(10.dp))
-            Button(onClick = {navigateToHome}) {
+            Button(onClick = {navigateToHome()}) {
                 Text(text="Navigate to Home")
             }
         }

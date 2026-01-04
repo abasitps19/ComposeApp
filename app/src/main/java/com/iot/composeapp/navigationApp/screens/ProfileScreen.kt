@@ -33,7 +33,7 @@ fun ProfileScreen(
 
            Text("Profile ID: ", fontSize = 30.sp)
             Spacer(modifier = Modifier.height(12.dp))
-            Button(onClick = {navigateToSettings }) {
+            Button(onClick = {navigateToSettings() }) {
                 Text("Go to Settings")
             }
         }
