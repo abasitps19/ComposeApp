@@ -1,4 +1,4 @@
-package com.iot.composeapp.presentation.navgationsbottom
+package com.iot.composeapp.navigationApp.screens
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -16,24 +16,26 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun SettingScreen(){
-
+fun ProfileScreen(
+    id: Int,
+    showDetails : Boolean,
+    navigateToSettings: () -> Unit
+){
     Box(
         modifier = Modifier
             .fillMaxSize()
             .padding(horizontal = 10.dp),
         contentAlignment = Alignment.Center
-    ){
-        Column(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            Text(text="Settings", fontSize = 40.sp)
-            Spacer(modifier= Modifier.height(10.dp))
-            Button(onClick = {}) {
-                Text(text="Navigate to Home")
+    ) {
+        Column(modifier = Modifier.fillMaxWidth(),
+            horizontalAlignment = Alignment.CenterHorizontally) {
+           // Text(text = "Login", fontSize = 24.sp, fontWeight = FontWeight.Bold)
+
+           Text("Profile ID: ", fontSize = 30.sp)
+            Spacer(modifier = Modifier.height(12.dp))
+            Button(onClick = {navigateToSettings }) {
+                Text("Go to Settings")
             }
         }
-
     }
 }

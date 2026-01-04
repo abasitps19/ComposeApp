@@ -1,4 +1,4 @@
-package com.iot.composeapp.presentation.navgations
+package com.iot.composeapp.navigationApp.navgations
 
 sealed class NavRoute (val path: String){
 
@@ -6,6 +6,9 @@ sealed class NavRoute (val path: String){
     object Profile: NavRoute("profile"){
         val id = "id"
         val showDetails = "showDetails"
+    }
+    object Settings: NavRoute("settings"){
+
     }
 
 }

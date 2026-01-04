@@ -13,13 +13,11 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.iot.composeapp.navigationApp.screens.HomeScreen
 
 import com.iot.composeapp.presentation.grocery.LazyColumnWithStickyHeader
-import com.iot.composeapp.presentation.navgations.Screen1Argu
-import com.iot.composeapp.presentation.navgations.Screen2Argu
-import com.iot.composeapp.presentation.navgationsbottom.HomeScreen
-import com.iot.composeapp.presentation.navgationsbottom.ProfileScreen
-import com.iot.composeapp.presentation.navgationsbottom.SettingScreen
+import com.iot.composeapp.presentation.layouts.Screen1Argu
+import com.iot.composeapp.presentation.layouts.Screen2Argu
 import com.iot.composeapp.ui.theme.ComposeAppTheme
 
 
@@ -28,8 +26,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
        //TestUI()
-        //TestNavigation()
-        NavigatioBottom()
+       TestNavigation()
+        //NavigatioBottom()
 
     }
 
@@ -41,7 +39,7 @@ class MainActivity : ComponentActivity() {
             ) {
                 //HomeScreen()
                // ProfileScreen()
-                SettingScreen()
+                //SettingScreen()
             }
         }
     }
