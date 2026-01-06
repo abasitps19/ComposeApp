@@ -13,6 +13,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.iot.composeapp.navigationApp.navgations.NavGraph
 import com.iot.composeapp.navigationApp.screens.HomeScreen
 
 import com.iot.composeapp.presentation.grocery.LazyColumnWithStickyHeader
@@ -25,23 +26,15 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-       //TestUI()
-       TestNavigation()
-        //NavigatioBottom()
+
+        NavigatioBottom()
 
     }
 
     fun NavigatioBottom() = setContent {
-        ComposeAppTheme {
-            Surface(
-                modifier = Modifier.fillMaxSize(),
-                color = MaterialTheme.colorScheme.background
-            ) {
-                //HomeScreen()
-               // ProfileScreen()
-                //SettingScreen()
-            }
-        }
+
+        val navController = rememberNavController()
+        NavGraph(navController=navController)
     }
 
     fun TestNavigation() = setContent {
